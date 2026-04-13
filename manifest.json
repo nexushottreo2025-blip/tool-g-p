@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Ngoc Tu w Phi Lon AutoReg",
+  "version": "1.0",
+  "description": "Register Token Discord made by Ngoc Tu",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["*://discord.com/*", "*://discord.gg/*", "*://temp-mail.phim.click/*", "*://raw.githubusercontent.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "ntu.jpg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://discord.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }],
+  "icons": {
+    "16": "ntu.jpg",
+    "48": "ntu.jpg",
+    "128": "ntu.jpg"
+  }
+}
